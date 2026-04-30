@@ -1,0 +1,5 @@
+[
+    {"img": "lapis1.jpg", "nome": "produto1", "endereco": "carrinho.html"},
+    {"img": "garrafa1.jpg", "nome": "Garrafa d'Agua", "endereco": "carrinho.html"},
+    {"img": "casa.jpg", "nome": "Casa", "endereco": "carrinho.html"}
+] 
