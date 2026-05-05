@@ -14,17 +14,21 @@ function trazDados(){
     fetch('dados.json')
         .then(response => response.json())
         .then(dadinho =>{
-            local = document.getElementById('vemDado');
-            dadinho.forEach(dado, index => {
-                local.innerHTML = 
-                    `<div class="card">
-                        <img src="imagens/`+dado.img+`" alt="">
-                        <h3>`+dado.nome+`</h3>
-                        <a href="`+dado.endereco+`">;
+            let local = document.getElementById('vemDado');
+
+            local.innerHTML = "";
+
+            dadinho.forEach((dado, index) => {
+                local.innerHTML += `
+                    <div class="card">
+                        <img src="imagens/${dado.img}" alt="">
+                        <h3>${dado.nome}</h3>
+                        <a href="${dado.endereco}">
                             <button type="button">Saiba Mais</button>
                         </a>
-                    </div>`;
-                local.appendChild(linha);
+                    </div>
+                `;
             }); 
-        });
+        })
+        .catch(error => console.error('Erro:', error));
 }
